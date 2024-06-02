@@ -1,21 +1,21 @@
-# Layer: Counties
+# Layer: Counties #
 
-The ***Counties*** layer contains all counties in Colorado, with context for Poudre Basin water supplies.
+The ***Counties*** layer contains all counties in Colorado, with context for Saint Vrain Basin water supplies.
 
 Counties on the map colored as follows:
 
 | **Color** | **Description** |
 | -- | -- |
-| **<span style="color:#000000">Black</span>** | Poudre Basin outline. |
-| **<span style="color:#003cb3">Blue</span>** | Counties that provide water to the Poudre Basin via transbasin diversions. |
-| **<span style="color:#59b300">Dark green</span>** | Counties that physically intersect the Poudre Basin:  Larimer and Weld counties. |
-| **<span style="color:#b3ff66; background-color:#999999">Light green</span>** | Counties that are within the South Platte basin and benefit from the Poudre directly or indirectly (**more detail will be added in the future**). |
-| **<span style="color:#ffff00; background-color:#999999">Yellow</span>** | Counties that currently or in the future will benefit from transbasin diversions out of the Poudre Basin (**more detail will be added in the future**). |
+| **<span style="color:#000000">Black</span>** | Saint Vrain Basin outline. |
+| **<span style="color:#003cb3">Blue</span>** | Counties that provide water to the Saint Vrain Basin via transbasin diversions. |
+| **<span style="color:#59b300">Dark green</span>** | Counties that physically intersect the Saint Vrain Basin:  Larimer and Weld counties. |
+| **<span style="color:#b3ff66; background-color:#999999">Light green</span>** | Counties that are within the South Platte basin and benefit from the Saint Vrain directly or indirectly (**more detail will be added in the future**). |
+| **<span style="color:#ffff00; background-color:#999999">Yellow</span>** | Counties that currently or in the future will benefit from transbasin diversions out of the Saint Vrain Basin (**more detail will be added in the future**). |
 | **<span style="color:#999999">Gray outline</span>** | Other counties. |
 
 Popup graphs are available for county population.
 
-## Data Sources
+## Data Sources ##
 
 The following are data sources for this map:
 
@@ -24,6 +24,6 @@ The following are data sources for this map:
 | County boundaries map layer. | [Counties in Colorado](https://data.openwaterfoundation.org/state/co/owf/counties/) dataset from the Open Water Foundation, created from [County Boundaries](https://data.colorado.gov/Transportation/Counties-in-Colorado/67vn-ijga) map layer dataset from Colorado Information Marketplace. |
 | County annual population time series | [Colorado DOLA Population](https://data.openwaterfoundation.org/state/co/dola/population) dataset from the Open Water Foundation, created from State Demography Office (SDO) [population data](https://demography.dola.colorado.gov/assets/html/sdodata.html).  See the ***Basin Entities / Political - Counties*** map information. |
 
-## Workflow
+## Workflow ##
 
-The workflow to create the map can be found in the [GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-poudre/tree/master/workflow/BasinEntities/Political-Counties).
+The workflow to create the map can be found in the [GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/BasinEntities/Political-Counties).

@@ -358,7 +358,7 @@ printVersion() {
   echoStderr ""
   echoStderr "${programName} version ${programVersion} ${programVersionDate}"
   echoStderr ""
-  echoStderr "Saint Vrain Basin Information Portal"
+  echoStderr "Saint Vrain Basin Information"
   echoStderr "Copyright 2024 Open Water Foundation."
   echoStderr ""
   echoStderr "License GPLv3+:  GNU GPL version 3 or later"
@@ -424,6 +424,10 @@ syncFiles() {
     logError "Deployed version is not specified for the S3 files."
     exit 1
   fi
+  if [ -z "${deployedRoot}" ]; then
+    logError "deployedRoot is not specified in the script."
+    exit 1
+  fi
 
   # Must edit the <base href> for path location strategy:
   # - this has to be done after building, based on the version folder
@@ -434,8 +438,9 @@ syncFiles() {
   #  <base href="/3.0.0/">
   #  or:
   #  <base href="/latest/">
-  logInfo "Updating <base href...> in: ${indexFile}"
-  sed -i "s~^.*<base href=.*$~  <base href=\"/${deployedVersion}/\">~" ${indexFile}
+  logInfo "Updating <base href...> to ${deployedRoot}/${deployedVersion}/ in:"
+  logInfo "  ${indexFile}"
+  sed -i "s~^.*<base href=.*$~  <base href=\"${deployedRoot}/${deployedVersion}/\">~" ${indexFile}
 
   # First synchronize the files to S3.
   doSync="true"
@@ -447,6 +452,11 @@ syncFiles() {
       exit 1
     fi
   fi
+
+  # Save the output to a temporary file and then extract the invalidation ID.
+  tmpFile=$(mktemp)
+  logInfo "Invalidating files so that CloudFront will make new files available..."
+  logInfo "  Save output to: ${tmpFile}"
 
   # Also invalidate the CloudFront distribution so that new version will be displayed:
   # - see:  https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html
@@ -465,19 +475,21 @@ syncFiles() {
   fi
   logInfo "Invalidating files so that CloudFront will make new files available..."
   if [ "${operatingSystem}" = "mingw" ]; then
-    MSYS_NO_PATHCONV=1 ${awsExe} cloudfront create-invalidation --distribution-id ${cloudFrontDistributionId} --paths "/${deployedVersion}/*" --profile "${awsProfile}"
+    MSYS_NO_PATHCONV=1 ${awsExe} cloudfront create-invalidation --distribution-id ${cloudFrontDistributionId} --paths "${deployedRoot}/${deployedVersion}/*" --output json --profile "${awsProfile}" | tee ${tmpFile}
   else
-    ${awsExe} cloudfront create-invalidation --distribution-id ${cloudFrontDistributionId} --paths "/${deployedVersion}/*" --profile "${awsProfile}"
+    ${awsExe} cloudfront create-invalidation --distribution-id ${cloudFrontDistributionId} --paths "${deployedRoot}/${deployedVersion}/*" --output json --profile "${awsProfile}" | tee ${tmpFile}
   fi
-  errorCode=$?
-  if [ $errorCode -ne 0 ]; then
+  errorCode=${PIPESTATUS[0]}
+  if [ ${errorCode} -ne 0 ]; then
     logError " "
     logError "Error invalidating CloudFront file(s)."
-    exit 1
+    return 1
   else
     logInfo "Success invalidating CloudFront file(s)."
+    # Now wait on the invalidation.
+    invalidationId=$(cat ${tmpFile} | grep '"Id":' | cut -d ':' -f 2 | tr -d ' ' | tr -d '"' | tr -d ',')
+    waitOnInvalidation ${cloudFrontDistributionId} ${invalidationId}
   fi
-  return 0
 }
 
 # Upload the staging area 'dist' files to S3.
@@ -522,7 +534,7 @@ uploadDist() {
     s3FolderLatestUrl="${s3FolderLatestUrl}/assets/app/data-maps"
   fi
 
-  # First upload to the version folder
+  # First upload to the version folder.
   echo "Uploading (aws sync) application ${appVersion} version"
   echo "  from: ${infoMapperDistAppFolder}"
   echo "    to: ${s3FolderVersionUrl}"
@@ -536,7 +548,7 @@ uploadDist() {
     logInfo "...done with aws sync of ${appVersion} copy."
   fi
 
-  # Next upload to the 'latest' folder
+  # Next upload to the 'latest' folder:
   # - TODO smalers 2020-04-20 evaluate whether to prevent 'dev' versions to be updated to 'latest'
   echo "Uploading Angular 'latest' version"
   echo "  from: ${infoMapperDistAppFolder}"
@@ -551,6 +563,63 @@ uploadDist() {
   fi
 }
 
+# Wait on an invalidation until it is complete:
+# - first parameter is the CloudFront distribution ID
+# - second parameter is the CloudFront invalidation ID
+waitOnInvalidation () {
+  local distributionId invalidationId output totalTime
+  local inProgressCount totalTime waitSeconds
+
+  distributionId=$1
+  invalidationId=$2
+  if [ -z "${distributionId}" ]; then
+    logError "No distribution ID provided."
+    return 1
+  fi
+  if [ -z "${invalidationId}" ]; then
+    logError "No invalidation ID provided."
+    return 1
+  fi
+
+  # Output looks like this:
+  #   INVALIDATIONLIST        False           100     67
+  #   ITEMS   2022-12-03T07:00:47.490000+00:00        I3UE1HOF68YV8W  InProgress
+  #   ITEMS   2022-12-03T07:00:17.684000+00:00        I30WL0RTQ51PXW  Completed
+  #   ITEMS   2022-12-03T00:46:38.567000+00:00        IFMPVDA8EX53R   Completed
+
+  totalTime=0
+  waitSeconds=5
+  logInfo "Waiting on invalidation for distribution ${distributionId} invalidation ${invalidationId} to complete..."
+  while true; do
+    # The following should always return 0 or greater.
+    #logInfo "Running: ${awsExe} cloudfront list-invalidations --distribution-id \"${cloudFrontDistributionId}\" --no-paginate --output text --profile \"${awsProfile}\""
+    #${awsExe} cloudfront list-invalidations --distribution-id "${cloudFrontDistributionId}" --no-paginate --output text --profile "${awsProfile}"
+    inProgressCount=$(${awsExe} cloudfront list-invalidations --distribution-id "${cloudFrontDistributionId}" --no-paginate --output text --profile "${awsProfile}" | grep "${invalidationId}" | grep InProgress | wc -l)
+    #logInfo "inProgressCount=${inProgressCount}"
+
+    if [ -z "${inProgressCount}" ]; then
+      # This should not happen?
+      logError "No output from listing invalidations for distribution ID:  ${cloudFrontDistributionId}"
+      return 1
+    fi
+
+    if [ ${inProgressCount} -gt 0 ]; then
+      logInfo "Invalidation status is InProgress.  Waiting ${waitSeconds} seconds (${totalTime} seconds total)..."
+      sleep ${waitSeconds}
+    else
+      # Done with invalidation.
+      break
+    fi
+
+    # Increment the total time.
+    totalTime=$(( ${totalTime} + ${waitSeconds} ))
+  done
+
+  logInfo "Invalidation is complete (${totalTime} seconds total)."
+
+  return 0
+}
+
 # Entry point into the script.
 
 # Check the operating system.
@@ -560,14 +629,14 @@ checkOperatingSystem
 # - must set after the operating system is set
 setAwsExe
 
-# Make sure the Angular version is OK
+# Make sure the Angular version is OK.
 checkAngularVersion
 
-# Get the user login
+# Get the user login:
 # - necessary for the upload log
 getUserLogin
 
-# Get the folder where this script is located since it may have been run from any folder
+# Get the folder where this script is located since it may have been run from any folder.
 scriptFolder=$(cd $(dirname "$0") && pwd)
 # mainFolder is infomapper
 repoFolder=$(dirname ${scriptFolder})
@@ -604,24 +673,28 @@ logInfo "infoMapperDistAppFolder:  ${infoMapperDistAppFolder}"
 getVersion
 logInfo "Application version:  ${appVersion}"
 logInfo "InfoMapper version:   ${infoMapperVersion}"
-s3FolderVersionUrl="s3://rivers.openwaterfoundation.org/co/saint-vrain/${appVersion}"
-s3FolderLatestUrl="s3://rivers.openwaterfoundation.org/co/saint-vrain/latest"
+s3FolderVersionUrl="s3://rivers.openwaterfoundation.org/state/co/saint-vrain/${appVersion}"
+s3FolderLatestUrl="s3://rivers.openwaterfoundation.org/state/co/saint-vrain/latest"
+# Deployed root is needed because not installing to the root folder of a bucket:
+# - "latest/" or "1.2.3/" will be appended to the following
+# - don't use a trailing / because it is added later
+deployedRoot="/state/co/saint-vrain"
 
 # Parse the command line.
-# Specify AWS profile with --aws-profile
+# Specify AWS profile with --aws-profile.
 awsProfile=""
-# Default is not to do 'aws' dry run
+# Default is not to do 'aws' dry run:
 # - override with --dryrun
 dryrun=""
-# Default is to build the dist and upload
+# Default is to build the dist and upload.
 doBuild="yes"
 doUpload="yes"
-# Only update /assets
+# Only update /assets:
 # - used when updating data files and configurations
 # - should work OK but may need to refine to only upload data layers
 #   but no configuration files
 uploadOnlyAssets="no"
-# Only update /assets/app/data-maps
+# Only update /assets/app/data-maps:
 # - used when updating data layers but not the InfoMapper
 # - should work OK but may need to refine to only upload data layers
 #   but no configuration files
@@ -644,5 +717,5 @@ fi
 # - maybe a one-line Python http server command?
 logInfo "Run the application in folder: ${infoMapperDistAppFolder}"
 
-# If here, was successful
+# If here, was successful.
 exit 0

@@ -314,7 +314,7 @@
           "sourcePath": "layers/diversions.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\CurrentConditions\\WaterSupply-Streamflow\\layers\\diversions.geojson'"
+            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-CO-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\CurrentConditions\\WaterSupply-Streamflow\\layers\\diversions.geojson'"
           ]
         },
         {
@@ -328,7 +328,7 @@
           "sourcePath": "layers/streamgages.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\CurrentConditions\\WaterSupply-Streamflow\\layers\\streamgages.geojson'"
+            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-CO-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\CurrentConditions\\WaterSupply-Streamflow\\layers\\streamgages.geojson'"
           ]
         }
       ],

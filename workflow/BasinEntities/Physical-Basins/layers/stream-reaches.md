@@ -1,14 +1,14 @@
-# Layer: Stream Reaches 
+# Layer: Stream Reaches #
 
 The ***Stream Reaches*** layer contains linework for physical streams in the basin.
 
-* Overview
-* Data Sources
-* Map Creation Workflow
+*   Overview
+*   Data Sources
+*   Map Creation Workflow
 
 ---
 
-## Overview
+## Overview ##
 
 The ***Stream Reaches*** layer features were extracted from statewide
 Source Water Route Framework (SWRF) layer, developed by the Colorado Division of Water Resources.
@@ -16,8 +16,8 @@ This layer uses linework from the
 [National Hydrography Dataset (NHD)](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-dataset?qt-science_support_page_related_con=0#qt-science_support_page_related_con).
 However, whereas NHD linework is composed of many segments created during map digitization,
 the SWRF layer is composed of longer lines that each correspond to a named stream.
-For example, the Cache la Poudre River mainstem is a single line from its headwaters to the
-confluence with the South Platte River.
+For example, the Saint Vrain mainstem is a single line from the confluence of its upstream reaches to the
+downstream confluence with the South Platte River.
 See the [Source Water Route Framework And Stream Mile Processing](https://dnrweblink.state.co.us/dwr/DocView.aspx?dbid=0&id=3652914&page=1&searchid=cb53d6e2-bb6f-4a93-887a-dd9ce6413168&cr=1)
 memorandum from the Colorado Division of Water Resources.
 
@@ -30,7 +30,7 @@ The State of Colorado's HydroBase database includes stream mile for structures, 
 and other data, which are also added as attributes in spatial datasets.
 This allows creating datasets and tools that use the stream mile for reference and analysis.
 
-## Data Sources
+## Data Sources ##
 
 The following are data sources for this layer:
 
@@ -38,7 +38,7 @@ The following are data sources for this layer:
 | -- | -- |
 | Stream Reaches layer | [Colorado Stream Reaches dataset](https://data.openwaterfoundation.org/state/co/dwr/stream-reaches/) from the Open Water Foundation, created from the [Colorado's Decision Support Systems](https://www.colorado.gov/pacific/cdss/gis-data-category) Source Water Route Framework. |
 
-## Map Creation Workflow
+## Map Creation Workflow ##
 
 The workflow to process the data can be found in the
-[Poudre Basin Information GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-poudre/tree/master/workflow/BasinEntities/Physical-StreamReaches).
+[Saint Vrain Basin Information GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-saint-vrain/tree/master/workflow/BasinEntities/Physical-StreamReaches).

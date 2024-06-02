@@ -16,4 +16,4 @@ The following are data sources for this map:
 ## Map Creation Workflow ##
 
 The workflow to create the map can be found in the
-[Saint Vrain Basin Information GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/BasinEntities/Administration-CoDwrWaterDistricts)
+[GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/BasinEntities/Administration-CoDwrWaterDistricts)

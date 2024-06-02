@@ -13,7 +13,7 @@ C:/Users/user/                             User files on Windows.
 /C/cygdrive/User/user/                     User's Windows files on Cygwin.
 /C/Users/user/                             User's Windows files on Git Bash.
   owf-dev/                                 Open Water Foundation development files.
-    InfoMapper-Saint Vrain/                Saint Vrain Basin Information website product.
+    InfoMapper-CO-SaintVrain/              Saint Vrain Basin Information website product.
       git-repos/                           Git repositories for the product.
 ============= above this line is recommended, below is required ==================
         owf-app-infomapper-ng/             InfoMapper repository local files.

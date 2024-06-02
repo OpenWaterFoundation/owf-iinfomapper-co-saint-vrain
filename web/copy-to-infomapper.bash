@@ -5,7 +5,7 @@
 # A better way would be to symbolically link InfoMapper 'app' to this `web` folder,
 # but that does not seem to work.
 # Folder for this script is similar to:
-#   /c/Users/user/owf-dev/InfoMapper-SaintVrain/git-repos/owf-infomapper-co-saint-vrain/web
+#   /c/Users/user/owf-dev/InfoMapper-CO-SaintVrain/git-repos/owf-infomapper-co-saint-vrain/web
 
 # Supporting functions, alphabetized.
 

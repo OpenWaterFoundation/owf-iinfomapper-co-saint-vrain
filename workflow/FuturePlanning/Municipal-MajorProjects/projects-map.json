@@ -291,16 +291,16 @@
         },
         {
           "geoLayerId": "WaterDistrictLayer",
-          "name": "CO DWR Water District 3",
-          "description": "Water District 3 boundary, from the Colorado Division of Water Resources.",
+          "name": "CO DWR Water District 5",
+          "description": "Water District 5 boundary, from the Colorado Division of Water Resources.",
           "crs": "EPSG:4326",
           "geometryType": "WKT:Polygon",
           "layerType": "Vector",
           "sourceFormat": "GeoJSON",
-          "sourcePath": "https://data.openwaterfoundation.org/state/co/dwr/districts/co-dwr-district-3.geojson",
+          "sourcePath": "https://data.openwaterfoundation.org/state/co/dwr/districts/co-dwr-district-5.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'https://data.openwaterfoundation.org/state/co/dwr/districts/co-dwr-district-3.geojson'"
+            "Read GeoLayer from GeoJSON file:  'https://data.openwaterfoundation.org/state/co/dwr/districts/co-dwr-district-5.geojson'"
           ]
         },
         {
@@ -311,10 +311,10 @@
           "geometryType": "WKT:LineString",
           "layerType": "Vector",
           "sourceFormat": "GeoJSON",
-          "sourcePath": "https://data.openwaterfoundation.org/state/co/dwr/stream-reaches/co-stream-reaches-district3.geojson",
+          "sourcePath": "https://data.openwaterfoundation.org/state/co/dwr/stream-reaches/co-stream-reaches-district5.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'https://data.openwaterfoundation.org/state/co/dwr/stream-reaches/co-stream-reaches-district3.geojson'"
+            "Read GeoLayer from GeoJSON file:  'https://data.openwaterfoundation.org/state/co/dwr/stream-reaches/co-stream-reaches-district5.geojson'"
           ]
         },
         {
@@ -442,19 +442,19 @@
           "geoLayerViews": [
             {
               "geoLayerViewId": "WaterDistrictLayerView",
-              "name": "CO DWR Water District 3",
-              "description": "Water District 3 boundary, from the Colorado Division of Water Resources",
+              "name": "CO DWR Water District 5",
+              "description": "Water District 5 boundary, from the Colorado Division of Water Resources",
               "geoLayerId": "WaterDistrictLayer",
               "properties": {
-                "docPath": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3.md"
+                "docPath": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5.md"
               },
               "geoLayerSymbol": {
                 "name": "Colorize district",
-                "description": "Show Water District 3 in black.",
+                "description": "Show Water District 5 in black.",
                 "classificationType": "Categorized",
                 "classificationAttribute": "DISTRICT",
                 "properties": {
-                  "classificationFile": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-classify-district.csv"
+                  "classificationFile": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-classify-district.csv"
                 }
               },
               "eventHandlers": [
@@ -464,7 +464,7 @@
                   "description": "Hover event configuration",
                   "hasVisualization": false,
                   "properties": {
-                    "eventConfigPath": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-event-config.json"
+                    "eventConfigPath": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-event-config.json"
                   }
                 },
                 {
@@ -473,7 +473,7 @@
                   "description": "Click event configuration",
                   "hasVisualization": false,
                   "properties": {
-                    "eventConfigPath": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-event-config.json"
+                    "eventConfigPath": "../../BasinEntities/Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-event-config.json"
                   }
                 }
               ]
