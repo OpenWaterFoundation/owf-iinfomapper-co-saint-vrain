@@ -13,7 +13,7 @@
 ## Overview ##
 
 The ***Flood Conditions*** map provides information about current flood conditions
-and other flood-related information for the Poudre Basin and surrounding region.
+and other flood-related information for the Saint Vrain Basin and surrounding region.
 
 Flooding can occur for various reasons including rain events, rapid snowmelt events,
 rain on snow events,
@@ -72,19 +72,19 @@ for example for a city, county, special district or other entity,
 with different entities being responsible for each system.
 Multiple systems may overlap and "listen" to the same stations.
 This redundancy ensures that multiple data sources are available during events.
-The following table provides links to publicly-accessible flood warning systems that provide data for the Poudre Basin.
+The following table provides links to publicly-accessible flood warning systems that provide data for the Saint Vrain Basin.
 Stations typically collect precipitation data and may also collect other data types such as air temperature,
 water level, discharge, and water quality.
 Implementing stations that measure water level and discharge requires additional effort and cost.
 
 | **Flood Warning System** | **Description** |
 | -- | -- |
-| [Larimer County Flood Warning System](https://larimerco-ns5.trilynx-novastar.systems/novastar/operator/) | Regional flood warning system including Larimer and Weld counties. The website uses NovaStar software and is supported by [TriLynx Systems](https://trilynx.systems/) and [Water and Earth Technologies](https://www.wetec.us/).  These companies collaborate with the [Open Water Foundation](https://openwatefoundation.org) on the Poudre Basin Information Website. All of these organizations are located in the Fort Collins area. |
+| [Larimer County Flood Warning System](https://larimerco-ns5.trilynx-novastar.systems/novastar/operator/) | Regional flood warning system including Larimer and Weld counties. The website uses NovaStar software and is supported by [TriLynx Systems](https://trilynx.systems/) and [Water and Earth Technologies](https://www.wetec.us/).  These companies collaborate with the [Open Water Foundation](https://openwatefoundation.org) on the Saint Vrain Basin Information Website. All of these organizations are located in the Fort Collins area. |
 | [Fort Collins Flood Warning System](https://gisweb.fcgov.com/HTML5Viewer/Index.html?viewer=Flood%20Warning) | Flood warning system maintained by For Collins.  See also the main [Flood Warning System](https://www.fcgov.com/utilities/what-we-do/stormwater/flooding/warning-system) web page. Fort Collins FWS stations typically measure precipitation but not water level. |
 
 ## Protection and Restoration ##
 
-The following table provides information about important flood protection and restoration organizations in the Poudre Basin.
+The following table provides information about important flood protection and restoration organizations in the Saint Vrain Basin.
 
 | **Organization** | **Description** |
 | -- | -- |
@@ -106,5 +106,5 @@ The following layer groups are included in this map.
 | Snowpack | Current conditions for snowpack.  See also the [***Current Conditions / Water Supply - Snowpack***](#map/current-snowpack) map. |
 | National Parks | National parks impacted by wildfires and flooding. |
 | Continental Divide | Continental divide, illustrating a geological boundary between basins. |
-| CO DWR Water Districts | Division of Water Resources water districts, to highlight the Poudre Basin (Water District 3).  See the [***Basin Entities / Administration - CO DWR Water Districts***](#map/entities-codwr-waterdistricts) map for more information. |
+| CO DWR Water Districts | Division of Water Resources water districts, to highlight the Saint Vrain Basin (Water District 5).  See the [***Basin Entities / Administration - CO DWR Water Districts***](#map/entities-codwr-waterdistricts) map for more information. |
 | Background Layers | Background layers that provide a frame of reference. |

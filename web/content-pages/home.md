@@ -54,9 +54,9 @@ time as funding is acquired for dataset and website development.**
 
 The Saint Vrain Basin Information website is published using a version that matches the version in release notes.
 This allows review of a version before release using a URL that includes the version,
-for example [https://rivers.openwaterfoundation.org/co/saint-vrain/2.3.0](https://rivers.openwaterfoundation.org/co/saint-vrain/1.0.0).
+for example [https://rivers.openwaterfoundation.org/state/co/saint-vrain/1.0.0](https://rivers.openwaterfoundation.org/co/saint-vrain/1.0.0).
 A historical archive of some versions is retained for use by software developers and is culled over time.
-To see the latest version, use [https://rivers.openwaterfoundation.org/co/saint-vrain](https://rivers.openwaterfoundation.org/co/saint-vrain/).
+To see the latest version, use [https://rivers.openwaterfoundation.org/state/co/saint-vrain](https://rivers.openwaterfoundation.org/state/co/saint-vrain/).
 
 Each map in this website can be shared and bookmarked.
 Bookmarking the URL that includes "latest" will ensure that latest available content is used.

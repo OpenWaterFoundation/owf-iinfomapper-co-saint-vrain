@@ -32,4 +32,4 @@ See also the instream flow reach termini layer.
 ## Map Creation Workflow ##
 
 The workflow to process the data can be found in the
-[Saint Vrain Basin Information GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/BasinEntities/Environment-InstreamFlowReaches).
+[GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/BasinEntities/Environment-InstreamFlowReaches).

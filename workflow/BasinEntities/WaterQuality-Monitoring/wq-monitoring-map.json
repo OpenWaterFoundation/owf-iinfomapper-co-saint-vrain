@@ -300,7 +300,7 @@
           "sourcePath": "layers/wq-monitoring-mainstem-basin.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\BasinEntities\\WaterQuality-Monitoring\\layers\\wq-monitoring-mainstem-basin.geojson'"
+            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-CO-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\BasinEntities\\WaterQuality-Monitoring\\layers\\wq-monitoring-mainstem-basin.geojson'"
           ]
         },
         {
@@ -314,7 +314,7 @@
           "sourcePath": "layers/wq-monitoring-northfork-basin.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\BasinEntities\\WaterQuality-Monitoring\\layers\\wq-monitoring-northfork-basin.geojson'"
+            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-CO-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\BasinEntities\\WaterQuality-Monitoring\\layers\\wq-monitoring-northfork-basin.geojson'"
           ]
         },
         {
@@ -342,7 +342,7 @@
           "sourcePath": "layers/wq-monitoring-sites.geojson",
           "properties": {},
           "history:": [
-            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\BasinEntities\\WaterQuality-Monitoring\\layers\\wq-monitoring-sites.geojson'"
+            "Read GeoLayer from GeoJSON file:  'D:\\Users\\steve\\owf-dev\\InfoMapper-CO-SaintVrain\\git-repos\\owf-infomapper-co-saint-vrain\\workflow\\BasinEntities\\WaterQuality-Monitoring\\layers\\wq-monitoring-sites.geojson'"
           ]
         }
       ],

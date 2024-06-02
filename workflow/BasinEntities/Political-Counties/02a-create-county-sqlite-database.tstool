@@ -1,4 +1,4 @@
-StartLog(LogFile="02a-create-county-sqlite-database.tstool.log",MaxSize="100000000")
+StartLog(LogFile="results/02a-create-county-sqlite-database.tstool.log",MaxSize="100000000")
 # Create the SQLite database of county population data.
 # The database is subsequently queried and data converted into time series.
 #

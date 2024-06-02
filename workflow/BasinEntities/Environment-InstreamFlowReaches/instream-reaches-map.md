@@ -1,11 +1,11 @@
-# Map: Instream Flow Reaches
+# Map: Instream Flow Reaches #
 
-* Overview
-* Layer Groups
+*   Overview
+*   Layer Groups
 
 ----------------
 
-## Overview
+## Overview ##
 
 The ***Instream Flow Reaches*** map shows stream reaches that
 are protected by an instream flow water right.
@@ -18,21 +18,12 @@ The nonprofit [Colorado Water Trust](https://coloradowatertrust.org/) also works
 Instream flow water rights are generally junior to water rights for agriculture and municipal water supply
 and are often appropriated for headwaters in order to protect species in those areas from additional water development.
 
-Instream flow water rights can also be appropriated for "recreational in-channel diversions" such
-as the [Poudre River Whitewater Park](https://www.fcgov.com/parks/poudre-river-park).
+The Saint Vrain River has long been involved in Colorado Water Law.
+See the following related to instream flow rights in the Saint Vrain Basin:
 
-The Poudre River has long been involved in Colorado Water Law,
-including the establishment of [Prior Appropriation Doctrine](https://www.poudreheritage.org/water-war-and-law/).
-See the following related to instream flow rights in the Poudre Basin:
+*   [Colorado Water Board Adopts Rules for Recreational In-Channel Diversion Water Rights](https://www.martindale.com/zoning-planning-land-use-law/article_Holland-Hart-LLP_28992.htm)
 
-* [Colorado Water Board Adopts Rules for Recreational In-Channel Diversion Water Rights](https://www.martindale.com/zoning-planning-land-use-law/article_Holland-Hart-LLP_28992.htm)
-
-The legal framework for augmentation plans is also being used to implement an instream flow right to improve flows in the Poudre:
-
-* [Poudre Runs Through It Initiative to improve flows while respecting water rights](https://watercenter.colostate.edu/prti-action-initiatives/#1553620695847-1d0f7ddd-ba0c)
-* [Colorado Water Trust article about the instream flow augmentation plan](https://coloradowatertrust.org/project/isf-augmentation-plan-poudre)
-
-## Layer Groups
+## Layer Groups ##
 
 The following layer groups are included in this map.
 

@@ -1,10 +1,10 @@
-# Layer: US Drought Monitor
+# Layer: US Drought Monitor #
 
 The US Drought Monitor layer contains drought conditions, updated weekly.
 The full US layer is shown because drought in one area tends to have impacts in other areas,
 such as in the Colorado River Basin.
 
-## Data Sources
+## Data Sources ##
 
 The following are data sources for this map:
 
@@ -14,4 +14,4 @@ The following are data sources for this map:
 
 ## Workflow
 
-The workflow to create the map can be found in the [GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-poudre/tree/master/workflow/CurrentConditions/WaterSupply-Drought).
+The workflow to create the map can be found in the [GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/CurrentConditions/WaterSupply-Drought).

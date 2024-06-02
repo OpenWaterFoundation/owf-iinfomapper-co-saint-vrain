@@ -1,6 +1,6 @@
-# Layer: Major Projects
+# Layer: Major Projects #
 
-The Major Projects layer shows the locations of major water projects in the Poudre Basin,
+The Major Projects layer shows the locations of major water projects in the Saint Vrain Basin,
 which focus on municipal water supply.
 These projects typically have multiple components, uses, benefits, and impacts, as explained by project websites.
 
@@ -14,4 +14,4 @@ The following are data sources for this map:
 
 ## Workflow
 
-The workflow to create the map can be found in the [GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-poudre/tree/master/workflow/FuturePlanning/Municipal-MajorProjects).
+The workflow to create the map can be found in the [GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/FuturePlanning/Municipal-MajorProjects).

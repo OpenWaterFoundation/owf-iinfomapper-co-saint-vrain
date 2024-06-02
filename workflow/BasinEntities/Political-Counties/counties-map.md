@@ -1,17 +1,17 @@
-# Map: Colorado Counties
+# Map: Colorado Counties #
 
-* Overview
-* Population Data
-* Layer Groups
+*   Overview
+*   Population Data
+*   Layer Groups
 
 ---------------
 
-## Overview
+## Overview ##
 
-The Colorado Counties map provides information about Colorado counties related to the Poudre Basin,
+The Colorado Counties map provides information about Colorado counties related to the Saint Vrain Basin,
 focusing on water resources.
 
-## Population Data
+## Population Data ##
 
 County population data are provided by the Colorado Department of Local Affairs (DOLA)
 and specifically the State Demographer's Office (SDO).
@@ -21,24 +21,24 @@ including total population and subsets for sex, race, age, etc.
 The total population estimates (for historical data) and forecasts
 were downloaded and processed to gain a general understanding of population and impacts on water resources.
 
-* [Population Data](https://demography.dola.colorado.gov/population/) - main population page
-	+ See links on this page explaining how historical estimates and forecasts are made
-* [Population: Data and Lookups](https://demography.dola.colorado.gov/population/data) - main dataset download page
-	+ [County and Municipal Population Timeseries Download](https://storage.googleapis.com/co-publicdata/county-muni-timeseries.csv) - `csv`
-	file used for historical data estimates for counties, municipalities, and municipality total split by county, where appropriate
-* [Population Totals for Colorado Counties](https://demography.dola.colorado.gov/population/population-totals-counties/#population-totals-for-colorado-counties)
-	+ [Population Forecasts (1 year increments)](https://drive.google.com/uc?export=download&id=0B-vz6H4k4SESdkNHSng2VGlEc1k) - Excel `xls` file
-	used for county population forecasts
-* [Colorado Information Marketplace, Total Population by County by Year](https://data.colorado.gov/Demographics/Total-Population-by-County-by-Year/9dd2-kw29) - used
-for initial map data, but the data from above are now used
+*   [Population Data](https://demography.dola.colorado.gov/population/) - main population page
+    +   See links on this page explaining how historical estimates and forecasts are made
+*   [Population: Data and Lookups](https://demography.dola.colorado.gov/population/data) - main dataset download page
+    +   [County and Municipal Population Timeseries Download](https://storage.googleapis.com/co-publicdata/county-muni-timeseries.csv) - `csv`
+        file used for historical data estimates for counties, municipalities, and municipality total split by county, where appropriate
+*   [Population Totals for Colorado Counties](https://demography.dola.colorado.gov/population/population-totals-counties/#population-totals-for-colorado-counties)
+    +   [Population Forecasts (1 year increments)](https://drive.google.com/uc?export=download&id=0B-vz6H4k4SESdkNHSng2VGlEc1k) - Excel `xls` file
+        used for county population forecasts
+*   [Colorado Information Marketplace, Total Population by County by Year](https://data.colorado.gov/Demographics/Total-Population-by-County-by-Year/9dd2-kw29) - used
+    for initial map data, but the data from above are now used
 
-## Layer Groups
+## Layer Groups ##
 
 The following layer groups are included in this map.
 
 | **Layer Group** | **Description** |
 | -- | -- |
-| Colorado Counties | Colorado counties related to the Poudre Basin, with population data. |
-| CO DWR Water Districts | Division of Water Resources water districts and divisions, to highlight the Poudre Basin (Water District 3) and the larger South Platte Basin (Division 1).  See the [***Basin Entities / Administration - CO DWR Water Districts***](#map/entities-codwr-waterdistricts) map for more information. |
+| Colorado Counties | Colorado counties related to the Saint Vrain Basin, with population data. |
+| CO DWR Water Districts | Division of Water Resources water districts and divisions, to highlight the Saint Vrain Basin (Water District 3) and the larger South Platte Basin (Division 1).  See the [***Basin Entities / Administration - CO DWR Water Districts***](#map/entities-codwr-waterdistricts) map for more information. |
 | Continental Divide | Continental divide line, to help understand transbasin issues. |
 | Background Layers | Background layers that provide a frame of reference. |

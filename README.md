@@ -26,7 +26,7 @@ The following sections are included in this documentation:
 The following folder structure is recommended for development.
 Top-level folders should be created as necessary.
 The following folder structure clearly separates user files (as per operating system),
-development area (`owf-dev`), product (`InfoMapper-SaintVrain`), repositories for product (`git-repos`),
+development area (`owf-dev`), product (`InfoMapper-CO-SaintVrain`), repositories for product (`git-repos`),
 and specific repositories for the product.
 Repository folder names should agree with GitHub repository names.
 Scripts in repository folders that process data should detect their starting location
@@ -38,7 +38,7 @@ C:\Users\user\                                 User's home folder for Windows.
 /cygdrive/C/Users/user/                        User's home folder for Cygwin.
 /home/user/                                    User's home folder for Linux.
   owf-dev/                                     Work done on Open Water Foundation projects.
-    InfoMapper-SaintVrain/                     Saint Vrain Information website, using InfoMapper
+    InfoMapper-CO-SaintVrain/                  Saint Vrain Information website, using InfoMapper
                                                (name of this folder is recommended).
       ---- below here folder names should match exactly ----
       git-repos/                               Git repositories for the Angular portal web application software.

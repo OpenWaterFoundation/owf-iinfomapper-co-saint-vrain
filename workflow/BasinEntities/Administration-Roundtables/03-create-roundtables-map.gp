@@ -1,4 +1,4 @@
-# Create a GeoMapProject file for roundtable basins for the State
+# Create a GeoMapProject file for roundtable basins for the State:
 # - read the previously downloaded layer file
 # - output to the web folder for use by the InfoMapper
 # - layer view groups are added from 1st drawn (bottom) to last drawn (top)
@@ -84,16 +84,16 @@ SetGeoLayerViewCategorizedSymbol(GeoLayerViewID="RoundtablesLayerView",Name="Col
 SetGeoLayerViewEventHandler(GeoLayerViewID="RoundtablesLayerView",EventType="hover",Name="Hover event",Description="Hover event configuration",Properties="eventConfigPath:layers/roundtables-event-config.json")
 SetGeoLayerViewEventHandler(GeoLayerViewID="RoundtablesLayerView",EventType="click",Name="Click event",Description="Click event configuration",Properties="eventConfigPath:layers/roundtables-event-config.json")
 # = = = = = = = = = =
-# Water district 3:  read layer and add to layer view group.
+# Water district 5:  read layer and add to layer view group.
 # GeoLayerViewGroupID: WaterDistrictsGroup
 # - group added above
 AddGeoLayerViewGroupToGeoMap(GeoLayerViewGroupID="WaterDistrictsGroup",Name="CO DWR Water Districts",Description="Water District boundaries from the Colorado Division of Water Resources.",Properties="selectedInitial: true",InsertPosition="Top")
 #
-ReadGeoLayerFromGeoJSON(InputFile="https://data.openwaterfoundation.org/state/co/dwr/districts/co-dwr-district-3.geojson",GeoLayerID="WaterDistrictLayer",Name="CO DWR Water District 3",Description="Water District 3 boundary from the Colorado Division of Water Resources.")
-AddGeoLayerViewToGeoMap(GeoLayerID="WaterDistrictLayer",GeoLayerViewID="WaterDistrictLayerView",Name="CO DWR Water District 3",Description="Water District 3 boundary from the Colorado Division of Water Resources",Properties="docPath:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3.md",InsertPosition="Top")
-SetGeoLayerViewCategorizedSymbol(GeoLayerViewID="WaterDistrictLayerView",Name="Colorize district",Description="Show Water District 3 in black.",ClassificationAttribute="DISTRICT",Properties="classificationFile:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-classify-district.csv")
-SetGeoLayerViewEventHandler(GeoLayerViewID="WaterDistrictLayerView",EventType="hover",Name="Hover event",Description="Hover event configuration",Properties="eventConfigPath:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-event-config.json")
-SetGeoLayerViewEventHandler(GeoLayerViewID="WaterDistrictLayerView",EventType="click",Name="Click event",Description="Click event configuration",Properties="eventConfigPath:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-event-config.json")
+ReadGeoLayerFromGeoJSON(InputFile="https://data.openwaterfoundation.org/state/co/dwr/districts/co-dwr-district-5.geojson",GeoLayerID="WaterDistrictLayer",Name="CO DWR Water District 5",Description="Water District 5 boundary from the Colorado Division of Water Resources.")
+AddGeoLayerViewToGeoMap(GeoLayerID="WaterDistrictLayer",GeoLayerViewID="WaterDistrictLayerView",Name="CO DWR Water District 5",Description="Water District 5 boundary from the Colorado Division of Water Resources",Properties="docPath:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5.md",InsertPosition="Top")
+SetGeoLayerViewCategorizedSymbol(GeoLayerViewID="WaterDistrictLayerView",Name="Colorize district",Description="Show Water District 5 in black.",ClassificationAttribute="DISTRICT",Properties="classificationFile:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-classify-district.csv")
+SetGeoLayerViewEventHandler(GeoLayerViewID="WaterDistrictLayerView",EventType="hover",Name="Hover event",Description="Hover event configuration",Properties="eventConfigPath:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-event-config.json")
+SetGeoLayerViewEventHandler(GeoLayerViewID="WaterDistrictLayerView",EventType="click",Name="Click event",Description="Click event configuration",Properties="eventConfigPath:../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-event-config.json")
 # = = = = = = = = = =
 # Write the map project file and copy layers to the location needed by the web application.
 # - follow InfoMapper conventions
@@ -104,9 +104,9 @@ CopyFile(SourceFile="roundtables-map.md",DestinationFile="${MapFolder}/roundtabl
 # -----
 # Layers
 #
-#CopyFile(SourceFile="layers/co-dwr-water-district-3-classify-district.csv",DestinationFile="${MapFolder}/layers/co-dwr-water-district-3-classify-district.csv")
-#CopyFile(SourceFile="../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3.md",DestinationFile="${MapFolder}/layers/co-dwr-water-district-3.md")
-#CopyFile(SourceFile="../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-3-event-config.json",DestinationFile="${MapFolder}/layers/co-dwr-water-district-3-event-config.json")
+#CopyFile(SourceFile="layers/co-dwr-water-district-5-classify-district.csv",DestinationFile="${MapFolder}/layers/co-dwr-water-district-5-classify-district.csv")
+#CopyFile(SourceFile="../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5.md",DestinationFile="${MapFolder}/layers/co-dwr-water-district-5.md")
+#CopyFile(SourceFile="../Administration-CoDwrWaterDistricts/layers/co-dwr-water-district-5-event-config.json",DestinationFile="${MapFolder}/layers/co-dwr-water-district-5-event-config.json")
 #
 CopyFile(SourceFile="layers/roundtables-classify-label.csv",DestinationFile="${MapFolder}/layers/roundtables-classify-label.csv")
 CopyFile(SourceFile="layers/roundtables.md",DestinationFile="${MapFolder}/layers/roundtables.md")

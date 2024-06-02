@@ -1,4 +1,4 @@
-# Layer: Snowpack (SNODAS)
+# Layer: Snowpack (SNODAS) #
 
 The ***Snowpack (SNODAS)*** layer contains daily snowpack snow water equivalent (SWE) estimate
 for water supply basins, using data from the Snow Data Assimilation System (SNODAS).
@@ -15,7 +15,7 @@ This version is periodically updated to the State's website during maintenance.
 
 See also the ***Current Conditions / Environment - Wildfires*** information.
 
-## Data Sources
+## Data Sources ##
 
 The following are data sources for this map:
 
@@ -23,7 +23,7 @@ The following are data sources for this map:
 | -- | -- |
 | Snowpack (SNODAS). | [CDSS SNODAS Tools](https://snodas.cdss.state.co.us/app/).  The latest daily SWE data are displayed. |
 
-## Workflow
+## Workflow ##
 
 The workflow to create the map can be found in the
-[GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-poudre/tree/master/workflow/CurrentConditions/WaterSupply-Snowpack).
+[GitHub repository](https://github.com/OpenWaterFoundation/owf-infomapper-co-saint-vrain/tree/master/workflow/CurrentConditions/WaterSupply-Snowpack).

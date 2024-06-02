@@ -1,12 +1,12 @@
-# Map: CO DWR Water Districts
+# Map: CO DWR Water Districts #
 
-* Overview
-* Comparison with Hydrologic Basins
-* Layer Groups
+*   Overview
+*   Comparison with Hydrologic Basins
+*   Layer Groups
 
 -------------
 
-## Overview
+## Overview ##
 
 The CO DWR Water Districts map shows basins used for water administration under the responsibility of
 the [Colorado Division of Water Resources (DWR)](https://dwr.colorado.gov/).
@@ -18,15 +18,13 @@ and timing of the diversion.
 
 See the following resources for more information:
 
-* Colorado Division of Water Resources:
-	+ [Water Administration](https://dwr.colorado.gov/services/water-administration)
-	+ [Division 1 Office](https://dwr.colorado.gov/division-offices/division-1-office)
+*   Colorado Division of Water Resources:
+    +   [Water Administration](https://dwr.colorado.gov/services/water-administration)
+    +   [Division 1 Office](https://dwr.colorado.gov/division-offices/division-1-office)
 
-## Comparison with Hydrologic Basins
+## Comparison with Hydrologic Basins ##
 
 Water Division and District boundaries do not exactly match hydrologic basins such as Hydrologic Unit Code (HUC) basins.
-For example, the hydrologically-connected area that includes Joe Wright Creek and Reservoir
-on the western edge of the Poudre Basin is not included in Water District 3.
 The reason for this likely is due to the long history of water administration that predates the more
 recent advent of geographic information systems and HUC basin nomenclature.
 
@@ -39,7 +37,7 @@ Analysis that is related to hydrology and environment may use datasets that link
 See the [***Basin Entities / Physical - Basins***](#map/entities-basins)
 map for information about hydrologic basins.
 
-## Layer Groups
+## Layer Groups ##
 
 The following layer groups are included in this map.
 
